@@ -1,0 +1,244 @@
+/* Reset básico */
+body, h1, p, div, button, video {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Estilo general */
+body {
+    font-family: 'Comic Sans MS', cursive, sans-serif;
+    background-color: #283c3f;
+    color: #0a0808;
+    overflow-x: hidden; /* Evita el desbordamiento horizontal */
+}
+
+/* Animación de entrada */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Contenedor principal */
+.main-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #4db6ac;
+    padding: 20px;
+    height: 150px;
+    position: relative;
+    animation: fadeIn 1s ease-in-out;
+}
+
+/* Contenedor izquierdo */
+.left-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100%;
+    position: relative;
+    animation: fadeIn 1s ease-in-out;
+}
+
+/* Nombre de la empresa */
+.company-name {
+    font-size: 2.5em;
+    color: #250b0b;
+    text-align: center;
+    margin-bottom: 100px;
+    z-index: 1; /* Asegura que esté por encima de los elementos de navegación */
+    text-shadow:  1px 20px 9px;
+}
+
+/* Barra de navegación */
+.nav-bar {
+    display: flex;
+    gap: 15px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    padding-left: 20px;
+}
+
+.nav-item {
+    background-color: #00796b;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 30px;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    box-shadow: 0 5px #004d40;
+}
+
+.nav-item:hover {
+    background-color: #004d40;
+    transform: translateY(-10px) rotate(-5deg);
+    box-shadow: 0 10px #00251a;
+}
+
+/* Contenedor derecho (Imagen) */
+.right-container {
+    display: flex;
+    justify-content: flex-end;
+    animation: fadeIn 1s ease-in-out;
+}
+
+.company-image {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid white;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 0 20px rgba(199, 19, 19, 0.3);
+}
+
+.company-image:hover {
+    transform: rotate(360deg) scale(1.2);
+}
+
+/* Layout general */
+.layout {
+    display: flex;
+    margin: 10px;
+    background-color: rgb(131, 88, 88);
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    animation: fadeIn 1s ease-in-out;
+}
+
+/* Sidebar */
+.sidebar {
+    width: 20%;
+    background-color: #708880;
+    padding: 10px;
+    border-radius: 50px;
+    align-self: center;
+}
+
+.sidebar button {
+    background-color: #1c8a7d;
+    color: rgb(46, 83, 77); 
+    border: 2px solid;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 50px;
+    width: 100%;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.sidebar button:hover {
+    background-color: #768181;
+    transform: scale(1.1) rotate(-5deg);
+    box-shadow: 0 3px;
+}
+
+/* Estilos para los videos */
+/* Estilos para la sección de videos */
+.videos {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+    margin-bottom: 20px;
+    padding: 10px;
+    border-radius: 15px;
+    background-color: #37474f; /* Fondo oscuro para contraste */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Sombra suave */
+}
+
+.videos video {
+    width: 100%;
+    height: auto;
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* Sombra para los videos */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.videos video:hover {
+    transform: scale(1.02); /* Aumenta ligeramente el video al pasar el mouse */
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5); /* Aumenta la sombra */
+}
+/* Contenido principal */
+.main-content {
+    flex-grow: 1;
+    margin-left: 20px;
+}
+
+.catalog-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.catalog-item {
+    background-color: #b2dfdb;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.catalog-item:hover {
+    transform: translateY(-10px) rotate(3deg);
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.2);
+}
+
+/* Estilos para los botones del catálogo */
+.buttons-cat button {
+    background-color: #ff9800;
+    color: white;
+    border: none;
+    padding: 15px 25px;
+    margin: 10px;
+    border-radius: 30px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 5px rgba(0, 0, 0, 0.2);
+}
+
+.buttons-cat button:hover {
+    background-color: #e65100;
+    transform: translateY(-5px) scale(1.05);
+    box-shadow: 0 10px rgba(0, 0, 0, 0.3);
+}
+
+.buttons-cat button:active {
+    transform: translateY(0) scale(1);
+    box-shadow: 0 5px rgba(0, 0, 0, 0.2);
+}
+
+/* Footer */
+.footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #00796b;
+    color: white;
+    padding: 20px;
+    margin-top: 20px;
+    border-radius: 15px;
+}
+
+.footer-botons button {
+    background-color: #004d40;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 50px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.footer-botons button:hover {
+    background-color: #00251a;
+    transform: translateY(-5px) rotate(-5deg);
+}
